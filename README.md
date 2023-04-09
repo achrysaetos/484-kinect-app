@@ -1,4 +1,4 @@
-# 484 Kinect App
+# 484 - Kinect App
 Simple drawing app. Demo vid here: https://youtu.be/_1G5D871B5Q
 1. Run the playback in the recorder repo (create local server)
 2. Open index.html in this repo
@@ -10,7 +10,7 @@ Simple drawing app. Demo vid here: https://youtu.be/_1G5D871B5Q
 * Erase - left hand closed, right hand closed
 * Color
 
-# To do
+## To do
 1. add gradient to brush strokes
 2. make brush head more apparent (outline it)
 3. add ui, will prob need to revisit figma

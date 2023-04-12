@@ -32,6 +32,7 @@ let picture; let cover;
 
 function preload() {
   picture = createImg("https://admissions.yale.edu/sites/default/files/styles/main-carousel-image--1280x850/public/home-main-carousel-images/crosscampus2019.png?itok=QJDBkwgU")
+  picture.hide()
 }
 
 function setup() {

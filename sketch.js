@@ -1,8 +1,8 @@
 
 // "ws://cpsc484-01.yale.internal:8888/frames" (live) or "ws://127.0.0.1:4444/frames" (recorded)
-var socket = new WebSocket("ws://127.0.0.1:4444/frames") 
+var socket = new WebSocket("ws://cpsc484-01.yale.internal:8888/frames")
 
-last_x = 500; last_y = 500 // track last position
+last_x = 600; last_y = 450 // track last position (initially centered)
 
 socket.onmessage = (event) => {
   let data = JSON.parse(event.data) // get web socket stream
@@ -13,40 +13,43 @@ socket.onmessage = (event) => {
     y = data.people[0].joints[15].position.y+300
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
-    // keep track of open/closed hands
-    drawing = true // data.people[0].joints[16].position.y-data.people[0].joints[17].position.y < 0
-    erasing = false // data.people[0].joints[16].position.y-data.people[0].joints[17].position.y > 0
+    // track hand and chest (start drawing when hand above chest)
+    hand_pos = data.people[0].joints[15].position.y
+    chest_pos = data.people[0].joints[2].position.y
 
-    if (drawing){
-      for(let i=1; i<100; i++){
-        draw(last_x+i/100*(x-last_x), last_y+i/100*(y-last_y))
-      }
-    } else if (erasing){
-      for(let i=1; i<100; i++){
-        erase(last_x+i/100*(x-last_x), last_y+i/100*(y-last_y))
-      }
-    } else if (moving){
-      console.log("Moving...") // invisible, no need to implement
+    if (hand_pos < chest_pos){
+      draw(last_x, last_y, x, y)
     }
 
     last_x = x; last_y = y // update last position
   }
 }
 
-// initial blank canvas
+
+/* p5.js functions */
+
+let picture; let cover;
+
+function preload() {
+  picture = createImg("https://admissions.yale.edu/sites/default/files/styles/main-carousel-image--1280x850/public/home-main-carousel-images/crosscampus2019.png?itok=QJDBkwgU")
+}
+
 function setup() {
-  createCanvas(1200, 900);
-  background(244, 244, 232);
-  noStroke();
-  fill(244, 244, 232);
+  createCanvas(1200, 900)
+  cover = createGraphics(width, height)
+
+  cover.background(100)
+  cover.textSize(48)
+  cover.textAlign(CENTER)
+  cover.text("SCRATCH ME", width/2, height/2) // or info about pic, etc
+
+  cover.imageMode(CENTER)
+  cover.strokeWeight(100) // make user selectable?
+  cover.blendMode(REMOVE)
 }
 
-function draw(x, y) {
-  fill(52, 165, 111);
-  ellipse(x, y, 30, 30);
-}
-
-function erase(x, y) {
-  fill(244, 244, 232);
-  ellipse(x, y, 60, 60);
+function draw(x1, y1, x2,y2) {
+  image(picture, 0, 0, width, height)
+  cover.line(x1, y1, x2, y2)
+  image(cover, 0, 0)
 }

@@ -1,0 +1,23 @@
+#circle{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    border:2px solid red;
+  }
+
+#circle2{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  height:100px;
+  width:100px;
+  border-radius:50%;
+  border:2px solid black;
+  left: 550px;
+  top: 400px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 30;
+}

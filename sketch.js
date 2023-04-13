@@ -43,7 +43,7 @@ function setup() {
 
 function draw(x, y) {
   fill(52, 165, 111);
-  ellipse(x, y, 30, 30);
+  ellipse(x, y, 10, 10);
 }
 
 function erase(x, y) {

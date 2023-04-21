@@ -6,10 +6,11 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 
 ## To do
 1. z-pos (track many users)
-2. add navbars
+2. add navbars to every page
 3. add +2 select options
-4. qr function
+4. qr functionality
 5. google drive pics
+6. test absolute positions on TV
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

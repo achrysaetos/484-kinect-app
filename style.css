@@ -22,6 +22,12 @@
   font-size: 30;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar {
   background-color: #313638;
   display: flex;
@@ -43,4 +49,18 @@
   width: 30px;
   height: 30px;
   margin-left: 15px;
+}
+
+.QR-items {
+  padding-top: 15%;
+}
+
+.QR-code-div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.QR-code-div img {
+  max-width: 30%;
+  height: auto;
 }

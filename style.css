@@ -21,3 +21,26 @@
   display: flex;
   font-size: 30;
 }
+
+.navbar {
+  background-color: #313638;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.left-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+.right-icon img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}

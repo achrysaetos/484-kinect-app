@@ -62,6 +62,6 @@ let circle;
 function update(x, y){
     circle = document.getElementById('circle'); 
 
-    circle.style.left = x-10 + 'px';
-    circle.style.top = y-10 + 'px';
+    circle.style.left = x + 'px';
+    circle.style.top = y + 'px';
 }

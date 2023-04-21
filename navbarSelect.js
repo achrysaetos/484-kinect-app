@@ -45,6 +45,11 @@ socket.onmessage = (event) => {
         home_icon = null
         left_arrow = null
     }
+    else{
+        home_icon = null
+        left_arrow = null
+        qr_code = null
+    }
 
     update(x, y) // update tracker
   }

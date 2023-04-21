@@ -88,3 +88,19 @@ body {
   max-width: 30%;
   height: auto;
 }
+
+#easel {
+  position: absolute;
+  left: 200px;
+  top: 300px;
+  width: 400px; 
+  height: 400px; 
+}
+
+#handwave {
+  position: absolute;
+  left: 700px;
+  top: 120px;
+  width: 85px; 
+  height: 85px; 
+}

@@ -9,13 +9,13 @@ socket.onmessage = (event) => {
   if (data.people.length > 0){ // found a person
 
     // get right hand position (and normalize it)
-    x = -data.people[0].joints[15].position.x+600
-    y = data.people[0].joints[15].position.y+300
+    x = -data.people[data.people.length-1].joints[15].position.x+600
+    y = data.people[data.people.length-1].joints[15].position.y+300
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
     // track hand and chest (start drawing when hand above chest)
-    hand_pos = data.people[0].joints[15].position.y
-    chest_pos = data.people[0].joints[2].position.y
+    hand_pos = data.people[data.people.length-1].joints[15].position.y
+    chest_pos = data.people[data.people.length-1].joints[2].position.y
 
     if (hand_pos < chest_pos){
       draw(last_x, last_y, x, y)
@@ -28,16 +28,16 @@ socket.onmessage = (event) => {
 
 /* p5.js functions */
 
-let catPics = [
-  "https://wallpaperaccess.com/full/374174.jpg",
-  "https://cdn.wallpapersafari.com/62/60/RolTDX.jpg",
-  "https://cdn.wallpapersafari.com/64/99/RXHCyN.jpg",
+let yalePics = [
+  "https://admissions.yale.edu/sites/default/files/styles/main-carousel-image--1280x850/public/home-main-carousel-images/crosscampus2019.png?itok=QJDBkwgU",
+  "https://yaledailynews.com/wp-content/uploads/2021/09/schwarzman_CourtesyFrancisDzikowski-3-1-1024x576.jpeg",
+  "https://admissions.yale.edu/sites/default/files/styles/flexslider_full/public/2010_05_10_19_03_37_central_campus_1.jpg?itok=1hVNjje6",
 ]
 
 let picture; let cover;
 
 function preload() {
-  picture = createImg(catPics[Math.floor(Math.random()*catPics.length)])
+  picture = createImg(yalePics[Math.floor(Math.random()*yalePics.length)])
   picture.hide()
 }
 

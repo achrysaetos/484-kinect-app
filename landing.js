@@ -18,7 +18,7 @@ socket.onmessage = (event) => {
             hoveredAt = Date.now()
         }
         else if (hoveredAt + buttonTime < Date.now()){
-            window.location.href = "index.html"
+            window.location.href = "themes.html"
         }
 
     update(x, y) // update tracker

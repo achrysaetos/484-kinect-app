@@ -30,7 +30,7 @@ socket.onmessage = (event) => {
             left_arrow = Date.now()
         }
         else if (left_arrow + buttonTime < Date.now()){
-            window.location.href = "index.html"
+            window.location.href = "themes.html"
         }
         home_icon = null
         qr_code = null

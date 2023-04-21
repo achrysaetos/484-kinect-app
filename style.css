@@ -20,16 +20,71 @@ body {
 }
 
 #theme{
-position:absolute;
-transform:translate(-50%,-50%);
-height:200px;
-width:200px;
-border-radius:10%;
-background-color: EF6461;
-top: 500px;
-align-items: center;
-justify-content: center;
-display: flex;
-font-size: 30;
-z-index: -1;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  height:200px;
+  width:200px;
+  border-radius:10%;
+  background-color: EF6461;
+  top: 500px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 30;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #313638;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.left-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+.right-icon img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  background-color: white;
+}
+
+.QR-items {
+  text-align: center;
+  padding-left: 10%;
+}
+
+.QR-items h1 {
+  font-weight: light;
+}
+
+.QR-items p {
+  font-weight: lighter;
+}
+
+.QR-code-div {
+  display: flex;
+  align-items: center;
+}
+
+.QR-code-div img {
+  padding-left: 25%;
+  padding-top:4%;
+  max-width: 30%;
+  height: auto;
 }

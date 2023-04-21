@@ -13,7 +13,7 @@ socket.onmessage = (event) => {
     y = data.people[data.people.length-1].joints[15].position.y+300
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
-    if (x >= 700 & x <= 9000 & y >= 400 & y <= 600){
+    if (x >= 700 & x <= 900 & y >= 400 & y <= 600){
         if (!hoveredAt){
             hoveredAt = Date.now()
         }

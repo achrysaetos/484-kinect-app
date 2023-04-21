@@ -22,10 +22,12 @@ socket.onmessage = (event) => {
         else if (hoveredAt + buttonTime < Date.now()){
             window.location.href = "themes.html"
         }
+    } else {
+      hoveredAt = null
+    }
 
     update(x, y) // update tracker
   }
-}
 }
 
 /* p5.js functions */

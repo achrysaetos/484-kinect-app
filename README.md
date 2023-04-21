@@ -6,7 +6,7 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 
 ## To do
 1. add ui (visit figma)
-2. ...
+2. make hand-agnostic/collaborative
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

@@ -5,8 +5,11 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 3. Open http://127.0.0.1:4444/ in another tab
 
 ## To do
-1. add ui (visit figma)
-2. ...
+1. z-pos (track many users)
+2. add navbars
+3. add +2 select options
+4. qr function
+5. google drive pics
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

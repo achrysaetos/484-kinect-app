@@ -19,7 +19,7 @@ socket.onmessage = (event) => {
             theme1 = Date.now()
         }
         else if (theme1 + buttonTime < Date.now()){
-            window.location.href = "index.html"
+            window.location.href = "canvas_yale.html"
         }
         theme2 = null
     }
@@ -28,7 +28,7 @@ socket.onmessage = (event) => {
             theme2 = Date.now()
         }
         else if (theme2 + buttonTime < Date.now()){
-            window.location.href = "index.html"
+            window.location.href = "canvas_cats.html"
         }
         theme1 = null
     }

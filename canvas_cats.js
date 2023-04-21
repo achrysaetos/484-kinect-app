@@ -28,10 +28,16 @@ socket.onmessage = (event) => {
 
 /* p5.js functions */
 
+let catPics = [
+  "https://wallpaperaccess.com/full/374174.jpg",
+  "https://cdn.wallpapersafari.com/62/60/RolTDX.jpg",
+  "https://cdn.wallpapersafari.com/64/99/RXHCyN.jpg",
+]
+
 let picture; let cover;
 
 function preload() {
-  picture = createImg("https://admissions.yale.edu/sites/default/files/styles/main-carousel-image--1280x850/public/home-main-carousel-images/crosscampus2019.png?itok=QJDBkwgU")
+  picture = createImg(catPics[Math.floor(Math.random()*catPics.length)])
   picture.hide()
 }
 

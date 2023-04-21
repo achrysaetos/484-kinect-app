@@ -11,7 +11,7 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 4. qr functionality
 5. google drive pics
 6. test absolute positions on TV
-7. add timeout/no users on screen check
+7. add timeout/no users on screen check - done
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

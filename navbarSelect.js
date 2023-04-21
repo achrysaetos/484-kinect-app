@@ -8,7 +8,8 @@ let qr_code = null
 
 socket.onmessage = (event) => {
   let data = JSON.parse(event.data) // get web socket stream
-  if (data.people.length > 0){ // found a person
+  if (data.people.length <= 0) window.location.href = "index.html"
+  else if (data.people.length > 0){ // found a person
 
     // get right hand position (and normalize it)
     person_id = data.groups.body_ids[0]

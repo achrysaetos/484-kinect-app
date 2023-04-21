@@ -4,20 +4,21 @@
     height:20px;
     width:20px;
     border-radius:50%;
-    border:2px solid red;
+    border:2px solid green;
+    z-index: 10;
   }
 
-#circle2{
+#theme{
   position:absolute;
   transform:translate(-50%,-50%);
-  height:100px;
-  width:100px;
-  border-radius:50%;
-  border:2px solid black;
-  left: 550px;
-  top: 400px;
+  height:200px;
+  width:200px;
+  border-radius:10%;
+  background-color: EF6461;
+  top: 500px;
   align-items: center;
   justify-content: center;
   display: flex;
   font-size: 30;
+  z-index: -1;
 }

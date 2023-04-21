@@ -10,8 +10,8 @@ socket.onmessage = (event) => {
   if (data.people.length > 0){ // found a person
 
     // get right hand position (and normalize it)
-    x = -data.people[data.people.length-1].joints[15].position.x+600
-    y = data.people[data.people.length-1].joints[15].position.y+300
+    x = -data.people[0].joints[15].position.x+600
+    y = data.people[0].joints[15].position.y+300
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
     if (x >= 200 & x <= 400 & y >= 400 & y <= 600){
@@ -19,7 +19,7 @@ socket.onmessage = (event) => {
             theme1 = Date.now()
         }
         else if (theme1 + buttonTime < Date.now()){
-            window.location.href = "canvas_pgs/yale.html"
+            window.location.href = "canvas_yale.html"
         }
         theme2 = null
     }
@@ -28,7 +28,7 @@ socket.onmessage = (event) => {
             theme2 = Date.now()
         }
         else if (theme2 + buttonTime < Date.now()){
-            window.location.href = "canvas_pgs/cats.html"
+            window.location.href = "canvas_cats.html"
         }
         theme1 = null
     }

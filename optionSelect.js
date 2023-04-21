@@ -23,7 +23,7 @@ socket.onmessage = (event) => {
         }
         theme2 = null
     }
-    else if (x >= 700 & x <= 9000 & y >= 400 & y <= 600){
+    else if (x >= 700 & x <= 900 & y >= 400 & y <= 600){
         if (!theme2){
             theme2 = Date.now()
         }

@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #E0DFD5;
+  font-family: sans-serif;
+}
+
 #circle{
   position:absolute;
   transform:translate(-50%,-50%);

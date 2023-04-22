@@ -14,10 +14,18 @@ socket.onmessage = (event) => {
   let data = JSON.parse(event.data) // get web socket stream
   if (data.people.length > 0){ // found a person
 
-    // get right hand position (and normalize it)
+    // get higher hand position (and normalize it)
     person_id = data.groups.body_ids[0]
-    x = -data.people.filter(x => x.body_id == person_id)[0].joints[15].position.x+600
-    y = data.people.filter(x => x.body_id == person_id)[0].joints[15].position.y+300
+    let x = 0; let y = 0;
+    right = data.people.filter(x => x.body_id == person_id)[0].joints[15].position.y+300
+    left = data.people.filter(x => x.body_id == person_id)[0].joints[8].position.y+300
+    if (right<left){
+        x = -data.people.filter(x => x.body_id == person_id)[0].joints[15].position.x+600
+        y = data.people.filter(x => x.body_id == person_id)[0].joints[15].position.y+300
+    } else {
+        x = -data.people.filter(x => x.body_id == person_id)[0].joints[8].position.x+600
+        y = data.people.filter(x => x.body_id == person_id)[0].joints[8].position.y+300
+    }
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
     if (x >= 700 & x <= 900 & y >= 400 & y <= 600){

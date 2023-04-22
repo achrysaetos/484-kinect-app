@@ -6,14 +6,15 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 
 ## To do
 1. z-pos (track many users) - done?
-2. add navbars to every page - natasha (done, besides scratch off)
+2. add navbars to every page - done
 3. add +2 select options - ryan
-4. qr functionality - natasha (done)
+4. qr functionality - done
 5. google drive pics
 6. test absolute positions on TV
 7. add timeout/no users on screen check - done
-8. make scratch off prettier and add description - leck
-9. make it work for left handers
+8. make scratch off prettier and add description - done
+9. make it work for left handers - done
+10. make hand tracking smoother
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

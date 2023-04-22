@@ -13,6 +13,7 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 6. test absolute positions on TV
 7. add timeout/no users on screen check - done
 8. make scratch off prettier and add description - leck
+9. make it work for left handers
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

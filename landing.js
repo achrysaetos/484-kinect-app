@@ -4,6 +4,12 @@ var socket = new WebSocket("ws://cpsc484-01.yale.internal:8888/frames")
 const buttonTime = 2000
 let hoveredAt = null
 
+// navbar vars
+const navbarTime = 2000
+let home_icon = null
+let left_arrow = null
+let qr_code = null
+
 socket.onmessage = (event) => {
   let data = JSON.parse(event.data) // get web socket stream
   if (data.people.length > 0){ // found a person
@@ -23,6 +29,25 @@ socket.onmessage = (event) => {
         }
     } else {
       hoveredAt = null
+    }
+
+    update(x, y) // update tracker
+
+    // navbar logic
+    if (x >= 800 & x <= 1200 & y >= 575 & y <= 675) {
+        if (!qr_code){
+            qr_code = Date.now()
+        }
+        else if (qr_code + navbarTime < Date.now()){
+            window.location.href = "qr_page.html"
+        }
+        home_icon = null
+        left_arrow = null
+    }
+    else{
+        home_icon = null
+        left_arrow = null
+        qr_code = null
     }
 
     update(x, y) // update tracker

@@ -6,9 +6,9 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 
 ## To do
 1. z-pos (track many users) - done?
-2. add navbars to every page - natasha
+2. add navbars to every page - natasha (done, besides scratch off)
 3. add +2 select options - ryan
-4. qr functionality - natasha
+4. qr functionality - natasha (done)
 5. google drive pics
 6. test absolute positions on TV
 7. add timeout/no users on screen check - done

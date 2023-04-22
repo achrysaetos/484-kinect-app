@@ -4,6 +4,12 @@ var socket = new WebSocket("ws://cpsc484-01.yale.internal:8888/frames")
 
 last_x = 600; last_y = 450 // track last position (initially centered)
 
+// navbar vars
+const buttonTime = 2000
+let home_icon = null
+let left_arrow = null
+let qr_code = null
+
 socket.onmessage = (event) => {
   let data = JSON.parse(event.data) // get web socket stream
   if (data.people.length <= 0) window.location.href = "../index.html"
@@ -24,9 +30,62 @@ socket.onmessage = (event) => {
     }
 
     last_x = x; last_y = y // update last position
+
+    // navbar logic
+    if (x >= 15 & x <= 90 & y >= 575){
+      if (!home_icon){
+          home_icon = Date.now()
+      }
+      else if (home_icon + buttonTime < Date.now()){
+          window.location.href = "../index.html"
+      }
+      left_arrow = null
+      qr_code = null
+    }
+    else if (x >= 130 & x <= 200 & y >= 575){
+        if (!left_arrow){
+            left_arrow = Date.now()
+        }
+        else if (left_arrow + buttonTime < Date.now()){
+            window.location.href = "../themes.html"
+        }
+        home_icon = null
+        qr_code = null
+    }
+    else if (x >= 800 & x <= 1200 & y >= 575) {
+        if (!qr_code){
+            qr_code = Date.now()
+        }
+        else if (qr_code + navbarTime < Date.now()){
+            window.location.href = "../qr_page.html"
+        }
+        home_icon = null
+        left_arrow = null
+    }
+    else{
+        home_icon = null
+        left_arrow = null
+        qr_code = null
+    }
+
+    update(x, y) // update tracker
   }
 }
 
+
+let circle;
+
+function update(x, y){
+  circle = document.getElementById('circle'); 
+  console.log(y)
+  if (y<600){
+    circle.style.display === "none"
+  } else if (y >= 600){
+    y = 650
+    circle.style.left = x + 'px';
+    circle.style.top = y + 'px';
+  }
+}
 
 /* p5.js functions */
 

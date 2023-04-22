@@ -48,7 +48,7 @@ body {
   left: 0;
   right: 0;
   justify-content: space-between;
-  padding: 25px;
+  padding: 15px;
 }
 
 .left-icons img {
@@ -85,7 +85,7 @@ body {
 .QR-code-div img {
   padding-left: 25%;
   padding-top:4%;
-  max-width: 30%;
+  max-width: 50%;
   height: auto;
 }
 

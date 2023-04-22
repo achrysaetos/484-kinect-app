@@ -5,15 +5,15 @@ Scratch off app. Demo vid here: https://youtu.be/fi3AlP5jWnA
 3. Open http://127.0.0.1:4444/ in another tab
 
 ## To do
-1. z-pos (track many users) - done?
-2. add navbars to every page - done
+1. ~~z-pos (track many users)~~
+2. ~~add navbars to every page~~
 3. add +2 select options - ryan
-4. qr functionality - done
+4. ~~qr functionality~~
 5. google drive pics
 6. test absolute positions on TV
-7. add timeout/no users on screen check - done
-8. make scratch off prettier and add description - done
-9. make it work for left handers - done
+7. ~~add timeout/no users on screen check~~
+8. ~~make scratch off prettier and add description~~
+9. ~~make it work for left handers~~
 10. make hand tracking smoother
 
 ## Sources

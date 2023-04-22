@@ -43,14 +43,17 @@ function preload() {
   picture.hide()
 }
 
+let pastel_colors = ["#e8dff5", "#fce1e4", "#fcf4dd", "#ddedea", "#daeaf6"]
+
 function setup() {
   createCanvas(1200, 900)
   cover = createGraphics(width, height)
 
-  cover.background(100)
+  cover.background(pastel_colors[Math.floor(Math.random()*pastel_colors.length)])
   cover.textSize(48)
+  cover.textFont("andale mono", 60)
   cover.textAlign(CENTER)
-  cover.text("SCRATCH ME", width/2, height/2) // or info about pic, etc
+  cover.text("Wave to scratch off 👋", width/2, height/4) // or info about pic, etc
 
   cover.imageMode(CENTER)
   cover.strokeWeight(100) // make user selectable?

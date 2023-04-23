@@ -99,9 +99,20 @@ function update(x, y){
 /* p5.js functions */
 
 let yalePics = [
-  "https://admissions.yale.edu/sites/default/files/styles/main-carousel-image--1280x850/public/home-main-carousel-images/crosscampus2019.png?itok=QJDBkwgU",
-  "https://yaledailynews.com/wp-content/uploads/2021/09/schwarzman_CourtesyFrancisDzikowski-3-1-1024x576.jpeg",
-  "https://admissions.yale.edu/sites/default/files/styles/flexslider_full/public/2010_05_10_19_03_37_central_campus_1.jpg?itok=1hVNjje6",
+  "https://wallpaperset.com/w/full/f/f/8/51684.jpg",
+  "https://wallpaperset.com/w/full/2/f/4/51697.jpg",
+  "https://wallpaperset.com/w/full/4/8/d/51702.jpg",
+  "https://wallpaperset.com/w/full/c/7/9/51706.jpg",
+  "https://wallpaperset.com/w/full/8/a/2/51707.jpg",
+  "https://wallpaperset.com/w/full/b/4/8/51708.jpg",
+  "https://wallpaperset.com/w/full/9/a/2/51710.jpg",
+  "https://wallpaperset.com/w/full/8/3/9/51713.jpg",
+  "https://wallpaperset.com/w/full/5/a/5/51720.jpg",
+  "https://wallpaperset.com/w/full/6/d/7/51721.jpg",
+  "https://wallpaperset.com/w/full/9/5/d/51729.jpg",
+  "https://wallpaperset.com/w/full/2/e/5/51731.jpg",
+  "https://wallpaperset.com/w/full/7/b/4/51734.jpg",
+  "https://wallpaperset.com/w/full/f/a/7/51738.jpg",
 ]
 
 let picture; let cover;

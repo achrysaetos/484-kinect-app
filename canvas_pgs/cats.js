@@ -99,9 +99,20 @@ function update(x, y){
 /* p5.js functions */
 
 let catPics = [
-  "https://wallpaperaccess.com/full/374174.jpg",
-  "https://cdn.wallpapersafari.com/62/60/RolTDX.jpg",
-  "https://cdn.wallpapersafari.com/64/99/RXHCyN.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/19/nature-7845443_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/22/20/06/bird-7870458_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/21/ai-generated-7845463_1280.jpg",
+  "https://cdn.pixabay.com/photo/2022/09/14/13/46/woods-7454336_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/23/ai-generated-7845480_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/24/04/16/ai-generated-7873292_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/04/03/12/41/ai-generated-7896729_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/01/26/22/23/ai-generated-7747278_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/02/14/15/33/ai-generated-7789913_1280.jpg",
+  "https://cdn.pixabay.com/photo/2022/09/22/00/42/mountains-7471423_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/20/ai-generated-7845449_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/04/20/18/37/ai-generated-7940344_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/19/ai-generated-7845442_1280.jpg",
+  "https://cdn.pixabay.com/photo/2022/09/14/20/26/city-7455209_1280.jpg",
 ]
 
 let picture; let cover;

@@ -87,9 +87,10 @@ function update(x, y){
   circle = document.getElementById('circle'); 
   console.log(y)
   if (y<600){
-    circle.style.display === "none"
+    circle.style.visibility = "hidden"
   } else if (y >= 600){
-    y = 650
+    y = 675
+    circle.style.visibility = "visible"
     circle.style.left = x + 'px';
     circle.style.top = y + 'px';
   }

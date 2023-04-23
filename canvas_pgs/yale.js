@@ -84,15 +84,16 @@ socket.onmessage = (event) => {
 let circle;
 
 function update(x, y){
-    circle = document.getElementById('circle'); 
-    console.log(y)
-    if (y<600){
-      circle.style.display === "none"
-    } else if (y >= 600){
-      y = 650
-      circle.style.left = x + 'px';
-      circle.style.top = y + 'px';
-    }
+  circle = document.getElementById('circle'); 
+  console.log(y)
+  if (y<600){
+    circle.style.visibility = "hidden"
+  } else if (y >= 600){
+    y = 675
+    circle.style.visibility = "visible"
+    circle.style.left = x + 'px';
+    circle.style.top = y + 'px';
+  }
 }
 
 /* p5.js functions */

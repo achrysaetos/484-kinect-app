@@ -5,6 +5,7 @@ var socket = new WebSocket("ws://cpsc484-01.yale.internal:8888/frames")
 const buttonTime = 2000
 let theme1 = null
 let theme2 = null
+let theme3 = null
 
 // navbar vars
 const navbarTime = 2000
@@ -32,7 +33,7 @@ socket.onmessage = (event) => {
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
     // selection logic
-    if (x >= 200 & x <= 400 & y >= 400 & y <= 600){
+    if (x >= 150 & x <= 350 & y >= 350 & y <= 550){
         if (!theme1){
             theme1 = Date.now()
         }
@@ -40,8 +41,9 @@ socket.onmessage = (event) => {
             window.location.href = "canvas_pgs/yale.html"
         }
         theme2 = null
+        theme3 = null
     }
-    else if (x >= 700 & x <= 900 & y >= 400 & y <= 600){
+    else if (x >= 450 & x <= 650 & y >= 350 & y <= 550){
         if (!theme2){
             theme2 = Date.now()
         }
@@ -49,10 +51,22 @@ socket.onmessage = (event) => {
             window.location.href = "canvas_pgs/cats.html"
         }
         theme1 = null
+        theme3 = null
+    }
+    else if (x >= 750 & x <= 950 & y >= 350 & y <= 550){
+        if (!theme3){
+            theme3 = Date.now()
+        }
+        else if (theme3 + buttonTime < Date.now()){
+            window.location.href = "canvas_pgs/submissions.html"
+        }
+        theme1 = null
+        theme2 = null
     }
     else{
         theme1 = null
         theme2 = null
+        theme3 = null
     }
 
     update(x, y) // update tracker

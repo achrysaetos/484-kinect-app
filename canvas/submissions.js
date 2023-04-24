@@ -9,6 +9,7 @@ const buttonTime = 2000
 let home_icon = null
 let left_arrow = null
 let qr_code = null
+let refresh = null
 
 socket.onmessage = (event) => {
   let data = JSON.parse(event.data) // get web socket stream
@@ -54,6 +55,7 @@ socket.onmessage = (event) => {
       }
       left_arrow = null
       qr_code = null
+      refresh = null
     }
     else if (x >= 100 & x <= 200 & y >= 1000){
         if (!left_arrow){
@@ -64,6 +66,18 @@ socket.onmessage = (event) => {
         }
         home_icon = null
         qr_code = null
+        refresh = null
+    }
+    else if (x >= 200 & x <= 300 & y >= 1000){
+        if (!refresh){
+            refresh = Date.now()
+        }
+        else if (refresh + buttonTime < Date.now()){
+            window.location.href = "submissions.html"
+        }
+        home_icon = null
+        qr_code = null
+        left_arrow = null
     }
     else if (x >= 1800 & x <= 1900 & y >= 1000) {
         if (!qr_code){
@@ -74,11 +88,13 @@ socket.onmessage = (event) => {
         }
         home_icon = null
         left_arrow = null
+        refresh = null
     }
     else{
         home_icon = null
         left_arrow = null
         qr_code = null
+        refresh = null
     }
 
     update(x, y) // update tracker

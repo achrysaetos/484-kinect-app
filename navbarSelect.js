@@ -54,6 +54,16 @@ socket.onmessage = (event) => {
         home_icon = null
         qr_code = null
     }
+    else if (x >= 1700 & x <= 1900 & y >= 1000) {
+        if (!qr_code){
+            qr_code = Date.now()
+        }
+        else if (qr_code + navbarTime < Date.now()){
+            window.location.href = "qr_page.html"
+        }
+        home_icon = null
+        left_arrow = null
+    }
     else{
         home_icon = null
         left_arrow = null

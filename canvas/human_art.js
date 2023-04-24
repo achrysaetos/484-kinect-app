@@ -137,7 +137,7 @@ function setup() {
   cover.text("Wave to scratch off 👋", width/2, height/4) // or info about pic, etc
 
   cover.imageMode(CENTER)
-  cover.strokeWeight(100) // make user selectable?
+  cover.strokeWeight(200) // make user selectable?
   cover.blendMode(REMOVE)
 }
 

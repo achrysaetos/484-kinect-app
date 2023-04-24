@@ -29,11 +29,15 @@ socket.onmessage = (event) => {
     }
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
-    // track hand and chest (start drawing when hand above chest)
-    hand_pos = data.people[data.people.length-1].joints[15].position.y
-    chest_pos = data.people[data.people.length-1].joints[2].position.y
+    if (x<5) x = 5
+    if (x>1885) x = 1885
+    if (y>1000) {
+      y = 1050
+      if (x<0) x = 50
+      if (x>1885) x = 1850
+    }
 
-    if (hand_pos < chest_pos){
+    if (y < 1000){
       draw(last_x, last_y, x, y)
     }
 
@@ -85,7 +89,6 @@ let circle;
 
 function update(x, y){
   circle = document.getElementById('circle'); 
-  console.log(y)
   if (y<1000){
     circle.style.visibility = "hidden"
   } else if (y >= 1000){

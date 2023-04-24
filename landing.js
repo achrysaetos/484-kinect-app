@@ -28,6 +28,14 @@ socket.onmessage = (event) => {
     }
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
+    if (x<5) x = 5
+    if (x>1885) x = 1885
+    if (y>1000) {
+      y = 1050
+      if (x<0) x = 50
+      if (x>1885) x = 1850
+    }
+  
     if (x >= 700 & x <= 900 & y >= 400 & y <= 600){
         if (!hoveredAt){
             hoveredAt = Date.now()

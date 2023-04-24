@@ -32,6 +32,14 @@ socket.onmessage = (event) => {
     }
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
+    if (x<5) x = 5
+    if (x>1885) x = 1885
+    if (y>1000) {
+      y = 1050
+      if (x<0) x = 50
+      if (x>1885) x = 1850
+    }
+
     // selection logic
     if (x >= 150 & x <= 350 & y >= 350 & y <= 550){
         if (!theme1){

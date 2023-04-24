@@ -42,7 +42,7 @@ socket.onmessage = (event) => {
     update(x, y) // update tracker
 
     // navbar logic
-    if (x >= 800 & x <= 1200 & y >= 575 & y <= 675) {
+    if (x >= 1800 & x <= 1900 & y >= 1000) {
         if (!qr_code){
             qr_code = Date.now()
         }

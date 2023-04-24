@@ -2,7 +2,7 @@
 // "ws://cpsc484-01.yale.internal:8888/frames" (live) or "ws://127.0.0.1:4444/frames" (recorded)
 var socket = new WebSocket("ws://cpsc484-01.yale.internal:8888/frames")
 
-last_x = 600; last_y = 450 // track last position (initially centered)
+last_x = 800; last_y = 450 // track last position (initially centered)
 
 // navbar vars
 const buttonTime = 2000
@@ -40,7 +40,7 @@ socket.onmessage = (event) => {
     last_x = x; last_y = y // update last position
 
     // navbar logic
-    if (x >= 15 & x <= 90 & y >= 575){
+    if (x >= 0 & x <= 100 & y >= 1000){
       if (!home_icon){
           home_icon = Date.now()
       }
@@ -50,7 +50,7 @@ socket.onmessage = (event) => {
       left_arrow = null
       qr_code = null
     }
-    else if (x >= 130 & x <= 200 & y >= 575){
+    else if (x >= 100 & x <= 200 & y >= 1000){
         if (!left_arrow){
             left_arrow = Date.now()
         }
@@ -60,7 +60,7 @@ socket.onmessage = (event) => {
         home_icon = null
         qr_code = null
     }
-    else if (x >= 800 & x <= 1200 & y >= 575) {
+    else if (x >= 1800 & x <= 1900 & y >= 1000) {
         if (!qr_code){
             qr_code = Date.now()
         }
@@ -86,10 +86,9 @@ let circle;
 function update(x, y){
   circle = document.getElementById('circle'); 
   console.log(y)
-  if (y<600){
+  if (y<1000){
     circle.style.visibility = "hidden"
-  } else if (y >= 600){
-    y = 675
+  } else if (y >= 1000){
     circle.style.visibility = "visible"
     circle.style.left = x + 'px';
     circle.style.top = y + 'px';
@@ -125,7 +124,7 @@ function preload() {
 let pastel_colors = ["#e8dff5", "#fce1e4", "#fcf4dd", "#ddedea", "#daeaf6"]
 
 function setup() {
-  createCanvas(1200, 900)
+  createCanvas(1600, 900)
   cover = createGraphics(width, height)
 
   cover.background(pastel_colors[Math.floor(Math.random()*pastel_colors.length)])

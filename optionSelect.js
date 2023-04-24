@@ -72,7 +72,7 @@ socket.onmessage = (event) => {
     update(x, y) // update tracker
 
     // navbar logic
-    if (x >= 15 & x <= 90 & y >= 575 & y <= 675){
+    if (x >= 0 & x <= 100 & y >= 1000){
         if (!home_icon){
             home_icon = Date.now()
         }
@@ -82,7 +82,7 @@ socket.onmessage = (event) => {
         left_arrow = null
         qr_code = null
     }
-    else if (x >= 130 & x <= 200 & y >= 575 & y <= 675){
+    else if (x >= 100 & x <= 200 & y >= 1000){
         if (!left_arrow){
             left_arrow = Date.now()
         }
@@ -92,7 +92,7 @@ socket.onmessage = (event) => {
         home_icon = null
         qr_code = null
     }
-    else if (x >= 800 & x <= 1200 & y >= 575 & y <= 675) {
+    else if (x >= 1800 & x <= 1900 & y >= 1000) {
         if (!qr_code){
             qr_code = Date.now()
         }

@@ -2,7 +2,7 @@
 // "ws://cpsc484-01.yale.internal:8888/frames" (live) or "ws://127.0.0.1:4444/frames" (recorded)
 var socket = new WebSocket("ws://cpsc484-01.yale.internal:8888/frames")
 
-last_x = 600; last_y = 450 // track last position (initially centered)
+last_x = 800; last_y = 450 // track last position (initially centered)
 
 // navbar vars
 const buttonTime = 2000
@@ -40,7 +40,7 @@ socket.onmessage = (event) => {
     last_x = x; last_y = y // update last position
 
     // navbar logic
-    if (x >= 15 & x <= 90 & y >= 575){
+    if (x >= 0 & x <= 100 & y >= 1000){
       if (!home_icon){
           home_icon = Date.now()
       }
@@ -50,7 +50,7 @@ socket.onmessage = (event) => {
       left_arrow = null
       qr_code = null
     }
-    else if (x >= 130 & x <= 200 & y >= 575){
+    else if (x >= 100 & x <= 200 & y >= 1000){
         if (!left_arrow){
             left_arrow = Date.now()
         }
@@ -60,7 +60,7 @@ socket.onmessage = (event) => {
         home_icon = null
         qr_code = null
     }
-    else if (x >= 800 & x <= 1200 & y >= 575) {
+    else if (x >= 1800 & x <= 1900 & y >= 1000) {
         if (!qr_code){
             qr_code = Date.now()
         }
@@ -86,10 +86,9 @@ let circle;
 function update(x, y){
   circle = document.getElementById('circle'); 
   console.log(y)
-  if (y<600){
+  if (y<1000){
     circle.style.visibility = "hidden"
-  } else if (y >= 600){
-    y = 675
+  } else if (y >= 1000){
     circle.style.visibility = "visible"
     circle.style.left = x + 'px';
     circle.style.top = y + 'px';
@@ -99,7 +98,34 @@ function update(x, y){
 /* p5.js functions */
 
 let submissions = [
-  "https://media.npr.org/assets/img/2023/01/14/this-is-fine_custom-dcb93e90c4e1548ffb16978a5a8d182270c872a9.jpg"
+  "https://cdn.pixabay.com/photo/2023/03/11/22/19/nature-7845443_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/22/20/06/bird-7870458_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/21/ai-generated-7845463_1280.jpg",
+  "https://cdn.pixabay.com/photo/2022/09/14/13/46/woods-7454336_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/23/ai-generated-7845480_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/24/04/16/ai-generated-7873292_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/04/03/12/41/ai-generated-7896729_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/01/26/22/23/ai-generated-7747278_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/02/14/15/33/ai-generated-7789913_1280.jpg",
+  "https://cdn.pixabay.com/photo/2022/09/22/00/42/mountains-7471423_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/20/ai-generated-7845449_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/04/20/18/37/ai-generated-7940344_1280.jpg",
+  "https://cdn.pixabay.com/photo/2023/03/11/22/19/ai-generated-7845442_1280.jpg",
+  "https://cdn.pixabay.com/photo/2022/09/14/20/26/city-7455209_1280.jpg",
+  "https://wallpaperset.com/w/full/f/f/8/51684.jpg",
+  "https://wallpaperset.com/w/full/2/f/4/51697.jpg",
+  "https://wallpaperset.com/w/full/4/8/d/51702.jpg",
+  "https://wallpaperset.com/w/full/c/7/9/51706.jpg",
+  "https://wallpaperset.com/w/full/8/a/2/51707.jpg",
+  "https://wallpaperset.com/w/full/b/4/8/51708.jpg",
+  "https://wallpaperset.com/w/full/9/a/2/51710.jpg",
+  "https://wallpaperset.com/w/full/8/3/9/51713.jpg",
+  "https://wallpaperset.com/w/full/5/a/5/51720.jpg",
+  "https://wallpaperset.com/w/full/6/d/7/51721.jpg",
+  "https://wallpaperset.com/w/full/9/5/d/51729.jpg",
+  "https://wallpaperset.com/w/full/2/e/5/51731.jpg",
+  "https://wallpaperset.com/w/full/7/b/4/51734.jpg",
+  "https://wallpaperset.com/w/full/f/a/7/51738.jpg",
 ]
 
 let picture; let cover;
@@ -112,7 +138,7 @@ function preload() {
 let pastel_colors = ["#e8dff5", "#fce1e4", "#fcf4dd", "#ddedea", "#daeaf6"]
 
 function setup() {
-  createCanvas(1200, 900)
+  createCanvas(1600, 900)
   cover = createGraphics(width, height)
 
   cover.background(pastel_colors[Math.floor(Math.random()*pastel_colors.length)])

@@ -25,7 +25,7 @@ socket.onmessage = (event) => {
     }
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 
-    if (x >= 15 & x <= 90 & y >= 575 & y <= 675){
+    if (x >= 0 & x <= 100 & y >= 1000){
         if (!home_icon){
             home_icon = Date.now()
         }
@@ -35,7 +35,7 @@ socket.onmessage = (event) => {
         left_arrow = null
         qr_code = null
     }
-    else if (x >= 130 & x <= 200 & y >= 575 & y <= 675){
+    else if (x >= 100 & x <= 200 & y >= 1000){
         if (!left_arrow){
             left_arrow = Date.now()
         }

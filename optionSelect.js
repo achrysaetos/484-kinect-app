@@ -38,7 +38,7 @@ socket.onmessage = (event) => {
             theme1 = Date.now()
         }
         else if (theme1 + buttonTime < Date.now()){
-            window.location.href = "canvas_pgs/yale.html"
+            window.location.href = "canvas/human_art.html"
         }
         theme2 = null
         theme3 = null
@@ -48,7 +48,7 @@ socket.onmessage = (event) => {
             theme2 = Date.now()
         }
         else if (theme2 + buttonTime < Date.now()){
-            window.location.href = "canvas_pgs/cats.html"
+            window.location.href = "canvas/ai_art.html"
         }
         theme1 = null
         theme3 = null
@@ -58,7 +58,7 @@ socket.onmessage = (event) => {
             theme3 = Date.now()
         }
         else if (theme3 + buttonTime < Date.now()){
-            window.location.href = "canvas_pgs/submissions.html"
+            window.location.href = "canvas/submissions.html"
         }
         theme1 = null
         theme2 = null

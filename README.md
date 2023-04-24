@@ -4,7 +4,10 @@ Our project is an art sharing system that allows students to choose a category o
 Our tasks that the installation addresses are to provide a short break for student in order to destress (creative component) and allow students to share and view community creations (collaborative component).
 
 ## Dependencies to Run the Project
-None! There are no constraints from the deployment environment.
+None! 
+
+## Deployment Environment
+There are no specific constraints from the deployment envoironment, other than the project is a single player game and is easiest to use if you are roughly 5 feet away from the screen. 
 
 ## Collaboration Record
 Ez Belay (eb898): Helped come up with the idea of a scratch off art sharing project, created the home page and navigation to the themes page (landing.js), early prototyping for the button navigation

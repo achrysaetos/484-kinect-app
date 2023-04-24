@@ -20,11 +20,11 @@ socket.onmessage = (event) => {
     right = data.people.filter(x => x.body_id == person_id)[0].joints[15].position.y+300
     left = data.people.filter(x => x.body_id == person_id)[0].joints[8].position.y+300
     if (right<left){
-        x = -data.people.filter(x => x.body_id == person_id)[0].joints[15].position.x+600
-        y = data.people.filter(x => x.body_id == person_id)[0].joints[15].position.y+300
+        x = 2 * -data.people.filter(x => x.body_id == person_id)[0].joints[15].position.x+600
+        y = 2 * data.people.filter(x => x.body_id == person_id)[0].joints[15].position.y+300
     } else {
-        x = -data.people.filter(x => x.body_id == person_id)[0].joints[8].position.x+600
-        y = data.people.filter(x => x.body_id == person_id)[0].joints[8].position.y+300
+        x = 2 * -data.people.filter(x => x.body_id == person_id)[0].joints[8].position.x+600
+        y = 2 * data.people.filter(x => x.body_id == person_id)[0].joints[8].position.y+300
     }
     console.log("("+Math.floor(x)+","+Math.floor(y)+")")
 

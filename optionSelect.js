@@ -34,6 +34,7 @@ socket.onmessage = (event) => {
 
     if (x<5) x = 5
     if (x>1885) x = 1885
+    if (y<5) y = 5
     if (y>1000) {
       y = 1050
       if (x<0) x = 50

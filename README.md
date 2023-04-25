@@ -18,7 +18,7 @@ Ryan Tsai (rat29): Brainstormed ideas with group; developed pages and functions 
 
 Natasha Ravinand (nr436): Brainstormed ideas to pivot from Canvas app to scratch-off app; developed the high-fidelity prototype in Figma along with color palette, clip images from group to use; created the navigation bar functionality (navbarSelect.js) and QR code/page (QR code itself, Google Drive, and qr_page.html)
 
-Leck Tang (clt38): Created the scratchoff canvas, helped choose pictures and categories, added quality of life changes (tracking for left/right hands, handling groups of users), fixed a lot of bugs
+Leck Tang (clt38): Created the scratchoff canvas, helped choose pictures and categories, added quality of life changes (tracking for left/right hands, handling groups of users, timing out functionality), fixed a lot of bugs, updated absolute positions from testing on the tv
 
 ## Sources
 Docs here: https://cpsc484-584-hci.gitlab.io/s23/display_tutorial/ \

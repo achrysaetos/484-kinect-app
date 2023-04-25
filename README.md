@@ -6,10 +6,11 @@ Our tasks that the installation address are to provide a short break for student
 * Collaborative component - added a QR code so users can submit pictures together and share their interests
 
 ## Dependencies to run the project
-None! Just open `index.html`.
+None! Just open `index.html`. 
 
 ## Constraints from deployment environment
 This project is a single player game and is easiest to use if you are roughly 5 feet away from the screen. Any spectators should be further from the screen, as the tracking can be less accurate if there are multiple users at the same depth from the kinect.
+We coded many of the tracking features for the TV display specifically, so it may look slightly different or the navigation may be less accurate on a laptop. 
 
 ## Collaboration Record
 Ez Belay (eb898): Helped come up with the idea to pivot to a scratch off art sharing project, created the Landing/home page and navigation to the themes page (index.html, landing.js), prototyping for the button navigation between pages, testing project on TV screen

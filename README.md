@@ -1,12 +1,14 @@
 # 484 - Scratch Off App
 Our project is an art sharing system that allows students to choose a category of pictures from which they want to scratch off and reveal. After uncovering the image, students are also be able to submit their own photos so that others have the chance to see images they want to share! 
 
-Our tasks that the installation address are to provide a short break for student in order to destress (creative component) and allow students to share and view community creations (collaborative component).
+Our tasks that the installation address are to provide a short break for student in order to destress (creative component) and allow students to share and view community creations (collaborative component). Users can complete the full experience in a reasonable time frame (ie. 2 mins), giving them a refreshing break.
+* Creative component - added two types of art (ai vs human) that users can compare and explore
+* Collaborative component - added a QR code so users can submit pictures together and share their interests
 
-## Dependencies to Run the Project
-None! 
+## Dependencies to run the project
+None! Just open `index.html`.
 
-## Deployment Environment
+## Constraints from deployment environment
 This project is a single player game and is easiest to use if you are roughly 5 feet away from the screen. Any spectators should be further from the screen, as the tracking can be less accurate if there are multiple users at the same depth from the kinect.
 
 ## Collaboration Record
